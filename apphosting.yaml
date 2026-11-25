@@ -1,0 +1,16 @@
+kind: "AppHostingYaml"
+schemaVersion: "v1"
+
+runConfig:
+  runtime: "nodejs20"
+  cpu: 1
+  memoryMiB: 2048
+  maxInstances: 10 # This stays at 10 to respect your CPU quota
+  minInstances: 0
+
+env:
+  - variable: GOOGLE_GENAI_API_KEY
+    secret: GOOGLE_GENAI_API_KEY
+    availability:
+      - BUILD
+      - RUNTIME

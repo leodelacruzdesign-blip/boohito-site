@@ -1,0 +1,111 @@
+
+{
+  "id": "cares-food-access",
+  "ungated_teaser": {
+    "title": "CARES Healthy Food Access Digital Platform",
+    "challenge_summary": "The **Community Action for Economic Stimulus (CARES)** program sought to create a **digital ecosystem** to connect residents with healthy food options. The challenge was to design a platform that was **accessible, user-friendly, and culturally relevant** to a diverse, multilingual community, while also integrating various food resources like **community gardens, farmers' markets, and local vendors**.",
+    "industry": "Public Health & Social Impact",
+    "fukuro_key_metric_teaser": {
+      "metric": "+45%",
+      "label": "Increase in Community Engagement"
+    }
+  },
+  "gated_content_data": {
+    "key_outcome_analysis": {
+      "headline": "Strategic Outcomes: A Triple-Win for Community, Economy, and Health",
+      "metric_details": [
+        {
+          "metric": "+45%",
+          "description": "Increase in community engagement with local food sources within the first six months."
+        },
+        {
+          "metric": "30%",
+          "description": "Reduction in reported food access barriers among pilot user groups."
+        },
+        {
+          "metric": "2.5x",
+          "description": "Higher user retention on the platform compared to initial engagement projections."
+        }
+      ]
+    },
+    "methodology_steps": {
+      "gated_title": "Our AI-Augmented Strategic Process",
+      "fukuro_process": [
+        {
+          "step": 1,
+          "name": "AI-Enhanced Persona Extraction",
+          "details": "Utilized **Natural Language Processing (NLP)** on community feedback sessions and survey data to automatically extract and synthesize **four core user personas**. This AI-driven approach ensured our personas were grounded in real user language and sentiment, capturing nuanced needs that manual analysis might miss."
+        },
+        {
+          "step": 2,
+          "name": "Predictive Journey Mapping",
+          "details": "Mapped out the end-to-end user journey for each persona, using a **predictive model** to identify potential friction points and opportunities for engagement. The AI highlighted areas where users were most likely to drop off, allowing us to proactively design interventions."
+        },
+        {
+          "step": 3,
+          "name": "Generative Design & Prototyping",
+          "details": "Employed **generative AI** to create a variety of low-fidelity wireframes based on the identified user goals and pain points. This accelerated the design process, allowing the team to rapidly iterate on multiple solutions before committing to a final high-fidelity prototype that was both accessible and effective."
+        }
+      ]
+    },
+    "extracted_personas": [
+      {
+        "name": "Elena, The Community Health Advocate",
+        "goals": "To easily find and share reliable information about healthy food resources with her clients, many of whom are non-native English speakers.",
+        "pain_point": "Spends too much time vetting resources and struggles with language barriers when communicating with clients.",
+        "journey_summary": "Elena's journey focuses on efficiency and multilingual support, needing a platform that aggregates verified information and offers translation features."
+      },
+      {
+        "name": "David, The Urban Gardener",
+        "goals": "To connect with other local gardeners, share surplus produce, and find nearby markets to sell his goods.",
+        "pain_point": "Feels disconnected from the local food community and lacks a simple way to manage his small-scale distribution.",
+        "journey_summary": "David needs features that foster community interaction, inventory management, and direct-to-consumer sales opportunities."
+      }
+    ],
+    "design_assets": {
+      "case_study_hero_image": "/images/cares-banner.png",
+      "style_guide_link": "https://www.figma.com/file/your-style-guide-link",
+      "style_guide_summary": "The design system, inspired by the organic colors of nature and the vibrancy of community, prioritizes WCAG 2.1 AA accessibility. It features a clean, card-based layout, large, legible typography (Roboto), and a color palette of earth tones (brown, green) and action-oriented accents (red, orange) to guide users intuitively.",
+      "prototype_flow": {
+        "initial_screen_id": "home",
+        "screens": [
+          {
+            "id": "home",
+            "title": "Home Screen",
+            "is_final": false,
+            "next_screen_id": "map_view",
+            "content_type": "component",
+            "component_details": {
+              "component": "HomeScreenLayout",
+              "header_image": "/images/cares-banner.png"
+            }
+          },
+          {
+            "id": "map_view",
+            "title": "Map View",
+            "is_final": false,
+            "next_screen_id": "dashboard",
+            "content_type": "component",
+            "component_details": {
+              "component": "MapSimulation",
+              "title": "Finding Nearby Food Sources",
+              "text": "The platform uses geolocation to help users discover gardens, markets, and vendors in their vicinity."
+            }
+          },
+          {
+            "id": "dashboard",
+            "title": "User Dashboard",
+            "is_final": true,
+            "next_screen_id": null,
+            "content_type": "component",
+            "component_details": {
+              "component": "DashboardView",
+              "title": "Personalized Dashboard",
+              "text": "Users can track their engagement, join community challenges, and manage their food-related activities."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

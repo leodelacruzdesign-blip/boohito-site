@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "UserAnalytics": {
+      "title": "User Analytics",
+      "description": "Tracks AI usage and HubSpot sync status for portfolio visitors.",
+      "type": "object",
+      "properties": {
+        "usage_count": {
+          "type": "number",
+          "description": "Number of AI prompts submitted."
+        },
+        "hubspot_id": {
+          "type": "string",
+          "description": "Associated HubSpot contact ID."
+        },
+        "lifecycle_tag": {
+          "type": "string",
+          "description": "HubSpot lifecycle stage or tag."
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "required": ["usage_count", "email"]
+    },
+    "MasterclassProgress": {
+      "title": "Masterclass Progress",
+      "description": "Stores user completion status for interactive UX Masterclass sections.",
+      "type": "object",
+      "properties": {
+        "learnerName": {
+          "type": "string"
+        },
+        "completedSections": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["completedSections"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com", "password"]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "#/backend/entities/UserAnalytics",
+      "description": "Stores visitor analytics and synchronization status."
+    },
+    "/artifacts/ux-masterclass-app/users/{userId}/progress/masterclass": {
+      "schema": "#/backend/entities/MasterclassProgress",
+      "description": "Stores individual learner progress for the UX Masterclass."
+    }
+  }
+}
